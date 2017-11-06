@@ -1,21 +1,31 @@
-# Heuristic Analysis
 
-### Solving Air Cargo Problem 1 using breadth_first_search...
+Solving Air Cargo Problem 1 using breadth_first_search...
 
-| Expansions |  Goal Tests |  New Nodes |
-| ---------- | ----------- | ---------- |
-|    43      |    56       |  180       |
+Expansions   Goal Tests   New Nodes
+    43          56         180
 
 Plan length: 6  Time elapsed in seconds: 0.03169219399933354
-
-```
 Load(C1, P1, SFO)
 Load(C2, P2, JFK)
 Fly(P2, JFK, SFO)
 Unload(C2, P2, SFO)
 Fly(P1, SFO, JFK)
 Unload(C1, P1, JFK)
-```
+
+
+Solving Air Cargo Problem 1 using breadth_first_tree_search...
+
+Expansions   Goal Tests   New Nodes
+   1458        1459        5960
+
+Plan length: 6  Time elapsed in seconds: 0.846601331999409
+Load(C1, P1, SFO)
+Load(C2, P2, JFK)
+Fly(P2, JFK, SFO)
+Unload(C2, P2, SFO)
+Fly(P1, SFO, JFK)
+Unload(C1, P1, JFK)
+
 
 Solving Air Cargo Problem 1 using depth_first_graph_search...
 
@@ -44,6 +54,65 @@ Fly(P1, JFK, SFO)
 Fly(P2, SFO, JFK)
 Unload(C2, P1, SFO)
 
+
+Solving Air Cargo Problem 1 using depth_limited_search...
+
+Expansions   Goal Tests   New Nodes
+   101         271         414
+
+Plan length: 50  Time elapsed in seconds: 0.07732774399846676
+Load(C1, P1, SFO)
+Load(C2, P2, JFK)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Unload(C1, P1, SFO)
+Load(C1, P1, SFO)
+Fly(P2, JFK, SFO)
+Unload(C2, P2, SFO)
+Fly(P1, SFO, JFK)
+Unload(C1, P1, JFK)
+
+
 Solving Air Cargo Problem 1 using uniform_cost_search...
 
 Expansions   Goal Tests   New Nodes
@@ -57,10 +126,96 @@ Fly(P2, JFK, SFO)
 Unload(C1, P1, JFK)
 Unload(C2, P2, SFO)
 
+
+Solving Air Cargo Problem 1 using recursive_best_first_search with h_1...
+
+Expansions   Goal Tests   New Nodes
+   4229        4230       17023
+
+Plan length: 6  Time elapsed in seconds: 2.797742967000886
+Load(C2, P2, JFK)
+Load(C1, P1, SFO)
+Fly(P2, JFK, SFO)
+Unload(C2, P2, SFO)
+Fly(P1, SFO, JFK)
+Unload(C1, P1, JFK)
+
+
+Solving Air Cargo Problem 1 using greedy_best_first_graph_search with h_1...
+
+Expansions   Goal Tests   New Nodes
+    7           9           28
+
+Plan length: 6  Time elapsed in seconds: 0.0046762459987803595
+Load(C1, P1, SFO)
+Load(C2, P2, JFK)
+Fly(P1, SFO, JFK)
+Fly(P2, JFK, SFO)
+Unload(C1, P1, JFK)
+Unload(C2, P2, SFO)
+
+
+Solving Air Cargo Problem 1 using astar_search with h_1...
+
+Expansions   Goal Tests   New Nodes
+    55          57         224
+
+Plan length: 6  Time elapsed in seconds: 0.03893415099992126
+Load(C1, P1, SFO)
+Load(C2, P2, JFK)
+Fly(P1, SFO, JFK)
+Fly(P2, JFK, SFO)
+Unload(C1, P1, JFK)
+Unload(C2, P2, SFO)
+
+
+Solving Air Cargo Problem 1 using astar_search with h_ignore_preconditions...
+
+Expansions   Goal Tests   New Nodes
+    41          43         170
+
+Plan length: 6  Time elapsed in seconds: 0.03516056199987361
+Load(C1, P1, SFO)
+Fly(P1, SFO, JFK)
+Unload(C1, P1, JFK)
+Load(C2, P2, JFK)
+Fly(P2, JFK, SFO)
+Unload(C2, P2, SFO)
+
+
+Solving Air Cargo Problem 1 using astar_search with h_pg_levelsum...
+
+Traceback (most recent call last):
+  File "run_search.py", line 129, in <module>
+    main(list(sorted(set(args.problems))), list(sorted(set((args.searches)))))
+  File "run_search.py", line 101, in main
+    run_search(_p, s, _h)
+  File "run_search.py", line 57, in run_search
+    node = search_function(ip, parameter)
+  File "/Users/laszlo/projects/udacity/aind/AIND-Planning/aimacode/search.py", line 276, in astar_search
+    return best_first_graph_search(problem, lambda n: n.path_cost + h(n))
+  File "/Users/laszlo/projects/udacity/aind/AIND-Planning/aimacode/search.py", line 213, in best_first_graph_search
+    frontier.append(node)
+  File "/Users/laszlo/projects/udacity/aind/AIND-Planning/aimacode/utils.py", line 595, in append
+    heapq.heappush(self.A, (self.f(item), item))
+  File "/Users/laszlo/projects/udacity/aind/AIND-Planning/aimacode/utils.py", line 283, in memoized_fn
+    val = fn(obj, *args)
+  File "/Users/laszlo/projects/udacity/aind/AIND-Planning/aimacode/search.py", line 276, in <lambda>
+    return best_first_graph_search(problem, lambda n: n.path_cost + h(n))
+  File "/Users/laszlo/projects/udacity/aind/AIND-Planning/aimacode/utils.py", line 283, in memoized_fn
+    val = fn(obj, *args)
+  File "/Users/laszlo/projects/udacity/aind/AIND-Planning/my_air_cargo_problems.py", line 192, in h_pg_levelsum
+    pg = PlanningGraph(self, node.state)
+  File "/Users/laszlo/projects/udacity/aind/AIND-Planning/my_planning_graph.py", line 224, in __init__
+    self.create_graph()
+  File "/Users/laszlo/projects/udacity/aind/AIND-Planning/my_planning_graph.py", line 288, in create_graph
+    self.update_a_mutex(self.a_levels[level])
+IndexError: list index out of range
+
 Solving Air Cargo Problem 2 using breadth_first_search...
 
 Expansions   Goal Tests   New Nodes
-   3343        4609       30509   
+   3343        4609       30509
 
 Plan length: 9  Time elapsed in seconds: 13.638315716999955
 Load(C1, P1, SFO)
@@ -77,7 +232,7 @@ Unload(C3, P3, SFO)
 Solving Air Cargo Problem 2 using depth_first_graph_search...
 
 Expansions   Goal Tests   New Nodes
-   624         625         5602   
+   624         625         5602
 
 Plan length: 619  Time elapsed in seconds: 3.539487648999966
 Fly(P3, ATL, SFO)
@@ -704,7 +859,7 @@ Unload(C3, P2, SFO)
 Solving Air Cargo Problem 2 using uniform_cost_search...
 
 Expansions   Goal Tests   New Nodes
-   4780        4782       43381   
+   4780        4782       43381
 
 Plan length: 9  Time elapsed in seconds: 12.289354056999969
 Load(C1, P1, SFO)
@@ -721,7 +876,7 @@ Unload(C3, P3, SFO)
 Solving Air Cargo Problem 3 using breadth_first_search...
 
 Expansions   Goal Tests   New Nodes
-  13489       17029       119420  
+  13489       17029       119420
 
 Plan length: 12  Time elapsed in seconds: 90.58743127700006
 Load(C1, P1, SFO)
@@ -741,7 +896,7 @@ Unload(C4, P1, JFK)
 Solving Air Cargo Problem 3 using depth_first_graph_search...
 
 Expansions   Goal Tests   New Nodes
-   422         423         3476   
+   422         423         3476
 
 Plan length: 406  Time elapsed in seconds: 1.740921733999926
 Fly(P1, SFO, ORD)
@@ -1155,7 +1310,7 @@ Unload(C4, P2, JFK)
 Solving Air Cargo Problem 3 using uniform_cost_search...
 
 Expansions   Goal Tests   New Nodes
-  18236       18238       159726  
+  18236       18238       159726
 
 Plan length: 12  Time elapsed in seconds: 52.843569731
 Load(C1, P1, SFO)
@@ -1170,4 +1325,3 @@ Unload(C1, P1, JFK)
 Unload(C2, P2, SFO)
 Unload(C3, P1, JFK)
 Unload(C4, P1, JFK)
-
